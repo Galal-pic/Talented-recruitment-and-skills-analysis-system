@@ -1,51 +1,36 @@
 import spacy 
 import PyPDF2
-from resume.huggingface import spacy_model,embedding_model,normalize_jobtitle
+from resume.huggingface import spacy_model,embedding_model
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 import pandas as pd
-df_jobs = pd.read_csv(r'cvs\new_embedded_data.csv')
+import tensorflow as tf
+df_jobs = pd.read_csv(r'cvs\data_with_vector_technology.csv')
 
 def extract_skills_from_pdf(pdf_path : str) -> str: 
     with open(pdf_path , 'rb') as pdf : 
         reader = PyPDF2.PdfReader(pdf, strict=False)
-        pdf_text = []
-        
-        for page in reader.pages:
-            content=page.extract_text()
-            pdf_text.append(content)
-            
-        pdf_text = "\n".join(pdf_text)
+        pdf_text = [page.extract_text() for page in reader.pages]        
+    pdf_text = "\n".join(pdf_text)
     doc = spacy_model(pdf_text)
-    s = doc.ents
-    l=[]
-    for x in s:
-        l.append(str(x))
-    l = list(set([word.title() for word in l])) 
-    return l
+    skills = list(set([ent.text.title() for ent in doc.ents]))
+    return skills
 
 def sentence_embedding4_similarity_score_test(skills):
-    df = pd.read_csv(r'cvs\new_embedded_data.csv')
-    new_skills = ', '.join(skills)
+    df = pd.read_csv(r'cvs\data_with_vector_technology.csv')
     # Embedding the new skills
-    skills_embeddings = embedding_model.encode(new_skills).reshape(1, -1)
-    df['new_skills_embeddings'] = df['skills_embeddings'].apply(lambda x: np.fromstring(x[1:-1], dtype=np.float32, sep=' '))
-    similarity_scores = cosine_similarity(np.vstack(df['new_skills_embeddings']), skills_embeddings)    
-    top_indices = np.argsort(similarity_scores, axis=0)[-5:][::-1].flatten()
-    top_job_titles = []
-    for index in top_indices:
-        job_title = df['Job Title'][index]
-        similarity_score = similarity_scores[index][0]  # Extract similarity score from 2D array
-        # top_job_titles.append((job_title, similarity_score))                              --> for the similarity score not percentage
-        # Normalize similarity score to a percentage
-        similarity_percentage = (similarity_score + 1) * 50  # Normalize to 0-100 scale    
-        top_job_titles.append((job_title, similarity_percentage))
-    output = [(first, round(second, 2)) for first, second in top_job_titles]
-    # output = [(normalize_jobtitle(first), round(second, 2)) for first, second in top_job_titles]
-    # df = pd.DataFrame(output, columns=['title', 'percentage'])
-    # grouped_df = df.groupby('title')['percentage'].mean().reset_index().to_records(index=False)
-    # grouped_df = sorted(grouped_df,key=lambda x : x[1],reverse=True)
-    return output , skills_embeddings
+    skills_emb = embedding_model.embed_query(str(skills))
+    skills_embeddings = tf.constant([skills_emb])
+
+    df['new_skills_embeddings'] = df['vector'].apply(lambda x: np.fromstring(x[1:-1], dtype=np.float32, sep=', '))
+    cosine_loss = tf.keras.losses.CosineSimilarity(axis=-1)
+
+    df['similarity_score'] = df['new_skills_embeddings'].apply(lambda job_skill_tensor: (cosine_loss(job_skill_tensor, skills_embeddings).numpy() * -1))
+
+    top_matches = df.nlargest(3, 'similarity_score')
+    output = [(row['job_title'], row['similarity_score']) for _, row in top_matches.iterrows()]
+    
+    return output , skills_emb
 
 
 def append_cv(cv_name, embedding,job_title,skills):
