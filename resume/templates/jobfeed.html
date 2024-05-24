@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-4">
+    <div class="text-center">
+        <h2>Job Feed</h2>
+    </div>
+
+    <!-- Flash messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    {% if job_feed %}
+    <div class="row">
+        <div class="col-md-4 mb-5">
+            <input type="text" class="form-control" id="job-title-filter" placeholder="Filter by Job Title">
+        </div>
+        <div class="col-md-4">
+            <input type="text" class="form-control" id="company-filter" placeholder="Filter by Company">
+        </div>
+        <div class="col-md-4 ">
+            <button type="button" class="btn btn-primary" onclick="filterJobs()">Apply Filters</button>
+            <button type="button" class="btn btn-secondary" onclick="resetFilters()">Reset Filters</button>
+        </div>
+    </div>
+
+    <div id="job-results">
+        <ul class="list-group">
+            {% for job in job_feed %}
+            <li class="list-group-item job-item" style="text-align: left;">
+                <div class="row job-result">
+                    <div class="col-md-10">
+                        <h5 class="mb-1"><strong>{{ job.job_title }}</strong></h5>
+                        <p class="mb-1">Company: {{ job.company }}</p>
+                        <p class="mb-1">Posted By: {{ job.username }}</p>
+                        <p class="mb-1">Recruiter Email: {{ job.recruiter_email }}</p>
+                        <div class="job-description" style="display: none;">
+                            <p><strong>Job Description:</strong></p>
+                            <p>{{ job.Job_description | replace('\r\n', '<br>') | replace('\r', '') }}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-primary" onclick="toggleJobDescription(this)">Expand</button>
+                        <form action="{{ url_for('applyjob') }}" method="post">
+                            <input type="hidden" name="company_name" value="{{ job.company }}">
+                            <input type="hidden" name="job_title" value="{{ job.job_title }}">
+                            <input type="hidden" name="recruiter_email" value="{{ job.recruiter_email }}">
+                            <button type="submit" class="btn btn-secondary">Apply  </button>
+                        </form>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    {% endif %}
+</div>
+
+<script>
+    function filterJobs() {
+        var jobTitleFilter = document.getElementById('job-title-filter').value.toLowerCase();
+        var companyFilter = document.getElementById('company-filter').value.toLowerCase();
+
+        var jobs = document.querySelectorAll('.job-item');
+
+        jobs.forEach(function(job) {
+            var jobTitle = job.querySelector('h5').innerText.toLowerCase();
+            var company = job.querySelector('p:nth-child(2)').innerText.toLowerCase();
+
+            if (jobTitle.includes(jobTitleFilter) && company.includes(companyFilter)) {
+                job.style.display = 'block';
+            } else {
+                job.style.display = 'none';
+            }
+        });
+    }
+
+    function resetFilters() {
+        document.getElementById('job-title-filter').value = '';
+        document.getElementById('company-filter').value = '';
+
+        var jobs = document.querySelectorAll('.job-item');
+
+        jobs.forEach(function(job) {
+            job.style.display = 'block';
+        });
+    }
+
+    function toggleJobDescription(button) {
+        var description = button.parentNode.parentNode.querySelector('.job-description');
+        if (description.style.display === 'none') {
+            description.style.display = 'block';
+            button.innerText = 'Collapse';
+        } else {
+            description.style.display = 'none';
+            button.innerText = 'Expand';
+        }
+    }
+</script>
+
+{% endblock %}

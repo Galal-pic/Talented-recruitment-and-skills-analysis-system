@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Upload CV{% endblock %}
+
+{% block content %}
+<style>
+    .custom-bg-color {
+        background-color: #e2ebf1; /* Example custom color */
+    }
+    .custom-font {
+        font-family: Arial, sans-serif;
+    }
+
+    .hero-title-color {
+        color: #257aba; /* Example color */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow */
+    }
+
+    .card-shadow {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for the card */
+    }
+    .hero-title-color {
+        color: #257aba; /* Example color */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow */
+    }
+</style>
+
+<div class="container my-5 ">
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+        <div class="col-md-4 text-left">
+            <img src="../static/images/aa.jpg" alt="Photo" class="img-fluid rounded" style="max-width: 100%; height: auto;">
+        </div>
+        <div class="col-lg-8 p-3 p-lg-5 pt-lg-3">
+            <h1 class="display-6 fw-bold lh-1 text-body-emphasis hero-title-color">Submit your CV to discover jobs tailored to your skills and experience.</h1>
+            <p class="lead">Submit your CV to view job advertisements tailored to your profile. Discover the skills required for each position and prepare effectively. Take the next step in your career with confidence.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-4">
+                <div class="col-md-12">
+                    <div class="card mt-5 shadow-lg" style="border: 2px solid #0096db;">
+                        <div class="card-body p-5 custom-bg-color">
+                            
+                            <h2 class="card-title text-center mb-4 hero-title-color" style="font-size: 30px; color: #333;">Upload Your CV</h2>
+                            <p class="text-center mb-4">Please select a file to upload:</p>
+                            {% with messages = get_flashed_messages() %}
+                            {% if messages %}
+                            <div class="alert alert-info" role="alert">
+                                <ul>
+                                    {% for message in messages %}
+                                    <li>{{ message }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            {% endif %}
+                            {% endwith %}
+                            <form method="post" action="/UPLOAD" enctype="multipart/form-data">
+                                <div class="form-group mb-4 text-center">
+                                    <input type="file" name="file" class="form-control-file form-control-lg" required>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-lg btn-primary">Upload</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

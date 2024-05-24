@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+    <title>Resume-{{title}}</title>
+    {% else %}
+    <title>Resume</title>
+    {% endif %}
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Define the hero class */
+        .hero {
+            background-color: #37517e;
+            /* White color */
+            height: 300px;
+            /* Adjust padding as needed */
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            /* Center content horizontally */
+            color: white;
+            /* Text color */
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            color: white;
+            /* Link color */
+            font-size: 1.5rem;
+            /* Adjust font size as needed */
+            margin-right: 7px;
+            /* Spacing between links */
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            /* Remove underline */
+            transition: all 0.5s
+        }
+
+        .btn-get-started {
+            color: white;
+            background-color: #31b0ef;
+            font-family: var(--heading-font);
+            font-weight: 500;
+            font-size: 15px;
+            letter-spacing: 1px;
+            padding: 10px 28px;
+            border-radius: 50px;
+            transition: 0.5s;
+        }
+
+        .btn-get-started:hover {
+            background-color: #257aba;
+        }
+
+        .logo img {
+            max-width: 70%;
+            height: auto;
+        }
+
+        /* Custom CSS to change font */
+
+        .custom-font {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            border: 2px solid #257aba;
+            /* Black border */
+            padding: 5px 10px;
+            /* Space inside the border */
+            border-radius: 5px;
+            /* Rounded corners */
+            background-color: #f3f3f3;
+            color: #257aba;
+
+        }
+
+        .navbar-custom {
+            padding-top: 0.8rem;
+            padding-bottom: 0.5rem;
+            background-color: #f3f3f3;
+        }
+
+        /* Custom button color */
+        .custom-btn-color {
+            color: #ffffff;
+            background-color: #257aba;
+            /* Custom color */
+            border-color: #257aba;
+            /* Border color */
+        }
+
+        .custom-btn-color:hover {
+            background-color: #1e5aa0;
+            /* Custom color on hover */
+            border-color: #1e5aa0;
+            /* Border color on hover */
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <header class="d-flex flex-wrap justify-content-between align-items-center navbar-custom border-bottom">
+        <div class="d-flex align-items-center">
+            <a href="/" class="text-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap" />
+                </svg>
+                <span class="fs-4 custom-font">Break THROUGH HIRE</span>
+            </a>
+        </div>
+        <ul class="nav nav-pills">
+            {% if current_user.is_authenticated %}
+            {% if current_user.__class__.__name__ == 'seekr' %}
+            <li class="nav-item">
+                <a class="btn btn-outline-primary btn-lg  me-2" href="{{ url_for('uploadcv') }}">uploadcv</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn btn-outline-primary btn-lg me-2" href="{{ url_for('jobfeed') }}">Job</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn btn-outline-primary btn-lg me-2" href="{{ url_for('jobs') }}">CareerJet Job</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="btn btn-outline-primary btn-lg me-2" href="{{ url_for('render_dashboard') }}">Dashboard</a>
+            </li>
+           
+            {% else %}
+            <div class="col-auto">
+                <a class="btn btn-outline-primary btn-lg me-2" href="{{ url_for('jobdescription') }}">Post</a>
+            </div>
+
+            <div class="col-auto">
+                <a class="btn btn-outline-primary btn-lg me-2" href="{{ url_for('history') }}">History</a>
+            </div>
+            <div class="col-auto">
+                <li class="nav-item"><a href="{{ url_for('render_dashboard') }}"
+                        class="btn btn-outline-primary btn-lg me-2" aria-current="page">Dashboard</a></li>
+            </div>
+            {% endif %}
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle btn-lg " type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    {{current_user.username}}
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="{{url_for('logout')}}" class="dropdown-item">Logout</a>
+                    </li>
+                </ul>
+            </div>
+            {% else %}
+            <li class="nav nav-pills">
+            <li class="nav-item"><a href="{{ url_for('render_dashboard') }}" class="btn btn-outline-primary btn-lg me-2"
+                    aria-current="page">Dashboard</a></li>
+            <li class="nav-item"><a href="{{ url_for('login') }}" class="btn btn-primary btn-lg custom-btn-color"
+                    aria-current="page">Log in</a></li>
+            </li>
+            {% endif %}
+
+        </ul>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

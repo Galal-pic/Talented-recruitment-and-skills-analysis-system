@@ -1,0 +1,153 @@
+
+{% extends "base.html"%}
+{% block content%}
+    <!-- contaniers -->
+    <div class="container mt-auto align-items-center">
+        <form action="" method="POST">
+            {{ form.hidden_tag()}}
+
+            <fieldset class="form-group" style="width: 60%;">
+                <legend class="border-bottom mb-4"> Create an Account</legend>
+
+
+                <div class="form-group">
+                    {{ form.fname.label(class='form-control-label')}}
+                    {% if form.fname.errors%}
+                    {{ form.fname(class='form-control form-control-lg is-invalid')}}
+                    <div class="invalid-feedback">
+                        {% for error in form.fname.errors %}
+                        <span>{{error}}</span>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    {{ form.fname(class='form-control form-control-lg')}}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.lname.label(class='form-control-label')}}
+                    {% if form.lname.errors%}
+                    {{ form.lname(class='form-control form-control-lg is-invalid')}}
+                    <div class="invalid-feedback">
+                        {% for error in form.lname.errors %}
+                        <span>{{error}}</span>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    {{ form.lname(class='form-control form-control-lg')}}
+                    {% endif %}
+
+                </div>
+                <div class="form-group">
+                    {{ form.username.label(class='form-control-label')}}
+                    {% if form.username.errors%}
+                    {{ form.username(class='form-control form-control-lg is-invalid')}}
+                    <div class="invalid-feedback">
+                        {% for error in form.username.errors %}
+                        <span>{{error}}</span>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    {{ form.username(class='form-control form-control-lg')}}
+                    {% endif %}
+
+                </div>
+                <div class="form-group">
+                    {{ form.email.label(class='form-control-label')}}
+                    {% if form.email.errors%}
+                    {{ form.email(class='form-control form-control-lg is-invalid')}}
+                    <div class="invalid-feedback">
+                        {% for error in form.email.errors %}
+                        <span>{{error}}</span>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    {{ form.email(class='form-control form-control-lg')}}
+                    {% endif %}
+
+                </div>
+                <div class="form-group">
+                    {{ form.linkedin.label(class='form-control-label')}}
+                    {% if form.linkedin.errors%}
+                    {{ form.linkedin(class='form-control form-control-lg is-invalid')}}
+                    <div class="invalid-feedback">
+                        {% for error in form.linkedin.errors %}
+                        <span>{{error}}</span>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    {{ form.linkedin(class='form-control form-control-lg')}}
+                    {% endif %}
+
+                </div>
+                <div class="form-group">
+                    {{ form.company.label(class='form-control-label')}}
+                    {% if form.company.errors%}
+                    {{ form.company(class='form-control form-control-lg is-invalid')}}
+                    <div class="invalid-feedback">
+                        {% for error in form.company.errors %}
+                        <span>{{error}}</span>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    {{ form.company(class='form-control form-control-lg')}}
+                    {% endif %}
+
+                </div>
+                <div class="form-group">
+                    {{ form.industry.label(class='form-control-label')}}
+                    {% if form.industry.errors%}
+                    {{ form.industry(class='form-control form-control-lg is-invalid')}}
+                    <div class="invalid-feedback">
+                        {% for error in form.industry.errors %}
+                        <span>{{error}}</span>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    {{ form.industry(class='form-control form-control-lg')}}
+                    {% endif %}
+
+                </div>
+
+                <div class="form-group">
+                    {{ form.password.label(class='form-control-label')}}
+                    {% if form.password.errors%}
+                    {{ form.password(class='form-control form-control-lg is-invalid')}}
+                    Password must contain:- At least one lowercase letter (a-z),(A-Z), (0-9), (@$!%*?&_) Be between 8 and 32 characters long
+                    <div class="invalid-feedback">
+                        {% for error in form.password.errors %}
+                        <span>{{error}}</span>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    {{ form.password(class='form-control form-control-lg')}}
+                    {% endif %}
+
+                </div>
+                <div class="form-group">
+                    {{ form.confirm_password.label(class='form-control-label')}}
+                    {% if form.confirm_password.errors%}
+                    {{ form.confirm_password(class='form-control form-control-lg is-invalid')}}
+                    <div class="invalid-feedback">
+                        {% for error in form.confirm_password.errors %}
+                        <span>{{error}}</span>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    {{ form.confirm_password(class='form-control form-control-lg')}}
+                    {% endif %}
+
+                </div>
+                <div class="form-group">
+                    {{ form.submit(class='btn btn-outline-info')}}
+                </div>
+            </fieldset>
+        </form>
+        <div class="broder-top pt-3">
+            <small class="text-muted">
+                Already have an Account?
+                <a href="{{url_for('login')}}" class="ml-2">Sign in</a>
+            </small>
+        </div>
+    </div>
+    {% endblock content%}

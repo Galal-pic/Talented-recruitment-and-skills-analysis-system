@@ -1,0 +1,58 @@
+{% extends "base.html"%}
+
+{% block content %}
+<style>
+    .custom-bg-color {
+        background-color: #f1eeee;
+        /* Example custom color */
+    }
+
+    .custom-font {
+        font-family: Arial, sans-serif;
+    }
+
+    .hero-title-color {
+        color: #257aba; /* Example color */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow */
+    }
+
+    .card-shadow {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for the card */
+    }
+</style>
+
+<div class="container d-flex flex-column align-items-center justify-content-center my-5">
+    <!-- Title Section -->
+    <div class="text-center">
+        <h1 class="display-9 fw-bold hero-title-color">Submit your job Description</h1>
+        <div class="col-lg-8 mx-auto">
+            <p class="lead mb-4">Enter your job description and required skills to find talented candidates ready to be hired. Streamline your recruitment process and build your team with ease.</p>
+        </div>
+    </div>
+    
+    <!-- Form Section -->
+    <div class="col-md-10">
+        <div class="card border card-shadow">
+            <div class="card-body custom-bg-color">
+                <h5 class="card-title text-center hero-title-color">Submit Job Details</h5>
+                <form method="post" action="{{ url_for('cvs') }}">
+                    <div class="mb-3">
+                        <label for="job_title" class="form-label ">Job Title</label>
+                        <input type="text" class="form-control" name="job_title" id="job_title"
+                            placeholder="Enter the job title" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="desc" class="form-label">Job Description</label>
+                        <textarea class="form-control" name="desc" id="desc" rows="10"
+                            placeholder="Enter Job Description" style="resize: none;" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary" style="background-color: #257aba !important;">Get CVs</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

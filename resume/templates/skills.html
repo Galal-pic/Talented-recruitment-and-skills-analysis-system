@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block title %} Result Page {% endblock %}
+{% block header %} {% endblock %}
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Your Most Suitable Job Title</h5>
+                    <p class="card-text lead" style="font-size: 35px;"><strong>{{ job_title }}</strong> </p>
+                    <h5> with simialrity score {{similarity}}</h5>
+                </div>
+            </div>
+    </div>
+</div>
+
+
+    
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <h2>Your Skills are: </h2>
+            <div class="d-flex flex-wrap" style="margin-top: 20px;">
+                {% for skill in skills %}
+                    <button type="button" class="btn btn-outline-success me-2 mb-2">{{ skill }}</button>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <div class="row" style="margin-top: 60px;">
+        <div class="col-md-4">
+            <h2 class="mb-4 ">Job Results</h2>
+            <div id="job-results" style="height: 150vh;  overflow-y: auto;">
+                <ul class="list-group">
+                    {% for job in job_results %}
+                        <li class="list-group-item justify-content-center">
+                            <div class="row job-result">
+                                <div class="col-md-11">
+                                    <h5 class="mb-1"><strong>{{ job.title }}</strong></h5>
+                                    <p class="mb-1">Company: {{ job.company }}</p>
+                                    <p class="mb-1">Location: {{ job.locations }}</p>
+                            
+                                    
+                                    <div class="row justify-content-center" style="margin-top: 6px;" >
+                                        <!-- Preview Button Column -->
+                                        <div class="col-md-3">
+                                            <button class="btn btn-outline btn-block" style="border-color: green;" onclick="previewJob('{{ job.url }}')">Preview</button>
+                                        </div>
+                                        <!-- Apply Button Column -->
+                                        <div class="col-md-3">
+                                            <form action="{{ job.url }}" method="get" target="_blank">
+                                                <button type="submit" class="btn btn-success btn-block">Apply</button>
+                                            </form>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>  
+        </div>
+        <div class="col-md-8">
+            <h2 class="mb-4"></h2>
+            <div id="job-details" style="height: 150vh;">
+                <!-- Default message before clicking a job result -->
+                <p class="text-muted">Click on "preview" to view details.</p>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+<script>
+    function previewJob(url) {
+        var jobDetailsContainer = document.getElementById('job-details');
+        jobDetailsContainer.innerHTML = '<iframe src="' + url + '" style="width: 100%; height: 100%; border: none;"></iframe>';
+    }
+</script>
+
+{% endblock %}

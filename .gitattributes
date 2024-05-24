@@ -1,0 +1,4 @@
+Models/titles/model.safetensors filter=lfs diff=lfs merge=lfs -text
+Models/NER_BERT/ner_model/model.safetensors filter=lfs diff=lfs merge=lfs -text
+Models/Spacy_CV/model-last/transformer/model filter=lfs diff=lfs merge=lfs -text
+Models/embedding/model.safetensors filter=lfs diff=lfs merge=lfs -text
