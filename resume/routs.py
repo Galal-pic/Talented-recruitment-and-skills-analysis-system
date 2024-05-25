@@ -11,6 +11,9 @@ from flask_login import login_user ,current_user,logout_user
 from werkzeug.utils import secure_filename
 from markupsafe import Markup
 import os ,json
+import pandas as pd
+import ast
+from itertools import chain
 
 @app.route('/')
 def PREHOME():
@@ -116,6 +119,10 @@ def upload_pdf():
         job_results = search_job(job_title)        
         # Remove the uploaded file after processing
         os.remove(path)
+        df = pd.read_csv('cvs\data_with_vector_technology.csv')
+        df['technology'] = df['technology'].apply(ast.literal_eval)
+        nested_list = df[df['job_title'] == 'data analyst']['technology'].tolist()
+        skills = list(chain.from_iterable(nested_list))
         return render_template('skills.html', filename=filename, skills=skills, job_title=job_title, similarity=similarity, job_results=job_results)
 
     else:
@@ -145,7 +152,7 @@ def seekerregister():
         db.session.commit()
         db.session.close()
 
-        flash(f"Account created successfully for {form.fname.data}", "success")
+        # flash(f"Account created successfully for {form.fname.data}", "success")
         return redirect(url_for('login'))
     
     return render_template('seekerregister.html',title='seekerregister',form=form)
