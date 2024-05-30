@@ -8,8 +8,10 @@ Utilizing sophisticated algorithms, our bracelets seamlessly match these extract
 Beyond aiding job seekers, our platform streamlines the recruitment process for companies by providing them with tailored CVs that precisely align with their job descriptions, thereby enhancing efficiency and effectiveness in hiring practices.
  
 ##  Introduction
-In this project, we address the needs of two key stakeholders: the job seeker, who seeks roles aligned with their skills and desires insights into areas for skill enhancement to secure their dream job, and the recruiter, who aims to procure the most fitting CVs by defining job requirements and essential skills. We recommend the most suitable CVs and facilitate effective communication channels between recruiters and potential candidates.
+In this project, we address the needs of two key stakeholders:
+- the **job seeker**, who seeks roles aligned with their skills and desires insights into areas for skill enhancement to secure their dream job
 ![uploadcv](https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system/assets/70837846/00611e2d-a7f4-4ad0-ab5c-817d9afe082a)
+- the **recruiter**, who aims to procure the most fitting CVs by defining job requirements and essential skills. We recommend the most suitable CVs and facilitate effective communication channels between recruiters and potential candidates.
 ![Capture](https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system/assets/70837846/ec499092-491c-4b12-a24f-a39401620ff8)
 
 
