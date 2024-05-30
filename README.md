@@ -1,4 +1,6 @@
-##  Talented recruitment and skills analysis system
+# Talented recruitment and skills analysis system
+
+## Abstract
  The project's goal is to help job seekers understand the 
 basic qualifications for specific jobs and evaluate the 
 suitability of their skills for those positions. Additionally, the 
