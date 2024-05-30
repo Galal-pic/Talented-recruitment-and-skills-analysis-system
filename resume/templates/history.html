@@ -1,8 +1,51 @@
-
 {% extends "base.html" %}
 {% block content %}
-<div>
-    history
-</div>
-{% endblock %}
 
+<div class="container mt-4">
+    <div class="text-center">
+        <h2>History</h2>
+    </div>
+
+    {% if data %}
+    <div id="job-results">
+        <ul class="list-group">
+            {% for cv in data %}
+            <li class="list-group-item job-item" style="text-align: left;">
+                <div class="row job-result">
+                    <div class="col-md-10">
+                        <h5 class="mb-1"><strong>{{ cv[0]}}</strong></h5>
+                        <p class="mb-1">cvs: {{ cv[2] }}</p>
+                        <div class="job-description" style="display: none;">
+                            <p><strong>job description:</strong></p>
+                            <p>{{ cv[1] }}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-primary" onclick="toggleJobDescription(this)">Expand</button>
+                        <form action="{{ url_for('open_url') }}" method="post">
+                            <input type="hidden" name="linkedin_link" value="{{ cv[5] }}">
+                            <button type="submit" class="btn btn-secondary">linkedin</button>
+                        </form>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    {% endif %}
+</div>
+
+<script>
+    function toggleJobDescription(button) {
+        var description = button.parentNode.parentNode.querySelector('.job-description');
+        if (description.style.display === 'none') {
+            description.style.display = 'block';
+            button.innerText = 'Collapse';
+        } else {
+            description.style.display = 'none';
+            button.innerText = 'Expand';
+        }
+    }
+</script>
+
+{% endblock %}

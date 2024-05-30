@@ -14,8 +14,8 @@
                 <div class="row job-result">
                     <div class="col-md-10">
                         <h5 class="mb-1"><strong>{{ cv[0] | replace('.pdf','') | replace('CV','')}}</strong></h5>
-                        <p class="mb-1">Percentage: {{ cv[6] }}</p>
-                        <p class="mb-1">Email: {{ cv[3] }}</p>
+                        <p class="mb-1">Percentage: {{ cv[6] }}%</p>
+                        <p class="mb-1">Email: <a href="mailto:{{ cv[3] }}">{{ cv[3] }}</a></p>
                         <p class="mb-1">Phone: {{ cv[2] }}</p>
                         <div class="job-description" style="display: none;">
                             <p><strong>Skills:</strong></p>
@@ -23,10 +23,10 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <button class="btn btn-primary" onclick="toggleJobDescription(this)">Expand</button>
+                        <button class="btn btn-primary mb-2" onclick="toggleJobDescription(this)">Expand</button>
                         <form action="{{ url_for('open_url') }}" method="post">
                             <input type="hidden" name="linkedin_link" value="{{ cv[5] }}">
-                            <button type="submit" class="btn btn-secondary">linkedin</button>
+                            <a href = "cvs\Ahmed Kandil CV.pdf" class="btn btn-secondary">Open CV</a>
                         </form>
                 </div>
             </li>

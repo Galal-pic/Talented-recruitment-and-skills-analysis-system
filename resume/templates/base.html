@@ -132,7 +132,7 @@
             <li class="nav-item">
                 <a class="btn btn-outline-primary btn-lg me-2" href="{{ url_for('render_dashboard') }}">Dashboard</a>
             </li>
-           
+
             {% else %}
             <div class="col-auto">
                 <a class="btn btn-outline-primary btn-lg me-2" href="{{ url_for('jobdescription') }}">Post</a>
@@ -161,6 +161,8 @@
             <li class="nav nav-pills">
             <li class="nav-item"><a href="{{ url_for('render_dashboard') }}" class="btn btn-outline-primary btn-lg me-2"
                     aria-current="page">Dashboard</a></li>
+            <li class="nav-item"><a href="{{ url_for('about') }}" class="btn btn-outline-primary btn-lg me-2"
+                    aria-current="page">About Project</a></li>
             <li class="nav-item"><a href="{{ url_for('login') }}" class="btn btn-primary btn-lg custom-btn-color"
                     aria-current="page">Log in</a></li>
             </li>

@@ -22,6 +22,11 @@
             font-size: 2.5rem; /* Increase font size */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow */
         }
+
+        /* Adjust transparency of the card background */
+        .card-transparent {
+            background: rgba(64, 107, 141, 0.7); /* Adjust the alpha value (0.7 in this case) for transparency */
+        }
     </style>
     
 </head>
@@ -31,7 +36,7 @@
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                    <div class="card text-white" style="border-radius: 1rem; background:#406b8d;">
+                    <div class="card text-white card-transparent" style="border-radius: 1rem;">
                         <div class="card-body p-5 text-center">
                             <div class="mb-md-5 mt-md-4 pb-5">
                                 <h2 class="fw-bold mb-2 text-uppercase">

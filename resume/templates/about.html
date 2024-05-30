@@ -1,6 +1,51 @@
-{% extends "base.html"%}
-{% block content%}
-<div>
-    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #f8f9fa; /* Light gray background */
+    }
+    .about-section {
+      background-color: #ffffff; /* White background */
+      border-radius: 15px; /* Rounded corners */
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Shadow */
+      padding: 30px; /* Padding inside the section */
+      margin-top: 50px; /* Move the section down */
+      font-family: Arial, sans-serif; /* Specify the font */
+    }
+    .about-section h1 {
+      color: #343a40; /* Dark gray text color */
+    }
+    .about-section p {
+      color: #6c757d; /* Gray text color */
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="about-section">
+        <h1 class="text-center">About Project</h1>
+        <p>Welcome to our innovative project, where we revolutionize the employment process with advanced technology and insightful analysis. Our project focuses on creating bracelets that serve as a bridge between job seekers and their dream careers. How do they work? Let us explain.</p>
+        <p>We meticulously scan and analyze numerous job descriptions, extracting the vital skills essential for various positions. These skills are the cornerstone of success in the job market.</p>
+        <p>Once we've identified these crucial skills, we invite job seekers to share their CVs with us. Here comes the magic: our bracelets engage in a seamless process of matching the skills extracted from the job descriptions with the skills showcased in the CVs. Through sophisticated algorithms and meticulous analysis, we determine the alignment between the candidate's skills and the job market demands.</p>
+        <p>But that's not all. We don't just stop at matching skills; we go further. Our system identifies any gaps or incomplete skills in the candidate's profile. Armed with this knowledge, we provide tailored recommendations and advertisements for skill enhancement or training opportunities. This way, job seekers not only understand their current standing in the job market but also receive actionable insights on how to improve and excel in their desired fields.</p>
+        <p>Moreover, we facilitate the recruitment process for both job seekers and companies. By providing companies with the most appropriate CVs that suit their job descriptions, we streamline the hiring process, making it more efficient and effective for all parties involved.</p>
+        <p>Join us on this journey where technology meets career aspirations, and together, we redefine the employment landscape.</p>
+      </div>
+    </div>
+  </div>
 </div>
-{% endblock content%}
+
+<!-- Bootstrap JS (optional) -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
