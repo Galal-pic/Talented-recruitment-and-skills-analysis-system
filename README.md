@@ -40,9 +40,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
 <div style="display:flex;">
   <img src="https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system/assets/70837846/18f45491-f203-4c59-90dc-5c548ae41a24" alt="uploadcv" style="width: 400px; height: auto; margin-right: 20px;">
   <img src="https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system/assets/70837846/58fc64e1-709c-4d5d-8194-a5175b604dd7" alt="Capture" style="width: 400px; height: auto;">
