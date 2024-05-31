@@ -39,17 +39,16 @@
 <!-- ABOUT THE PROJECT -->
 ## Abstract
 
-<div style="display:flex;">
-  <img src="https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system/assets/70837846/18f45491-f203-4c59-90dc-5c548ae41a24" alt="uploadcv" style="width: 400px; height: auto; margin-right: 20px;">
-  <img src="https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system/assets/70837846/58fc64e1-709c-4d5d-8194-a5175b604dd7" alt="Capture" style="width: 400px; height: auto;">
-</div>
-
 This project introduces an innovative approach to revolutionizing the employment process by integrating advanced technology and insightful analysis. Our focus is on the development of bracelets that function as a conduit between job seekers and their ideal career opportunities. Through meticulous scanning and analysis of numerous job descriptions, we extract essential skills crucial for various positions, serving as the foundation for success in the competitive job market. 
 
 Utilizing sophisticated algorithms, our bracelets seamlessly match these extracted skills with those showcased in job seekers' CVs, facilitating a comprehensive evaluation of alignment between candidate skills and market demands. Additionally, our system identifies any skill gaps or deficiencies in the candidate's profile, offering personalized recommendations and advertisements for skill enhancement or training opportunities. 
 
 Beyond aiding job seekers, our platform streamlines the recruitment process for companies by providing them with tailored CVs that precisely align with their job descriptions, thereby enhancing efficiency and effectiveness in hiring practices.
- 
+
+ <div style="display:flex;">
+  <img src="https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system/assets/70837846/18f45491-f203-4c59-90dc-5c548ae41a24" alt="uploadcv" style="width: 400px; height: auto; margin-right: 20px;">
+  <img src="https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system/assets/70837846/58fc64e1-709c-4d5d-8194-a5175b604dd7" alt="Capture" style="width: 400px; height: auto;">
+</div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
