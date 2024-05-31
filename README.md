@@ -40,10 +40,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
 <div style="display:flex;">
-  <img src="https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system/assets/70837846/4565282c-a5a0-46d3-a47e-601a7ebd62d5" alt="uploadcv" style="width: 400px; height: auto;">
-  <img src="https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system/assets/70837846/ec499092-491c-4b12-a24f-a39401620ff8" alt="Capture" style="width: 400px; height: auto;">
+  <img src="https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system/assets/70837846/ea589c3a-636c-48ad-81b9-8c2c1d22f88b" alt="uploadcv" style="width: 400px; height: auto;">
+  <img src="https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system/assets/70837846/58fc64e1-709c-4d5d-8194-a5175b604dd7" alt="Capture" style="width: 400px; height: auto;">
 </div>
+
 
 
 
