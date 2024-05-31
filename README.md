@@ -34,11 +34,10 @@ Utilizing sophisticated algorithms, our bracelets seamlessly match these extract
 
 Beyond aiding job seekers, our platform streamlines the recruitment process for companies by providing them with tailored CVs that precisely align with their job descriptions, thereby enhancing efficiency and effectiveness in hiring practices.
 
- <div style="display:flex;">
+<div style="display:flex; justify-content: center;">
   <img src="https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system/assets/70837846/18f45491-f203-4c59-90dc-5c548ae41a24" alt="uploadcv" style="width: 400px; height: auto; margin-right: 20px;">
   <img src="https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system/assets/70837846/58fc64e1-709c-4d5d-8194-a5175b604dd7" alt="Capture" style="width: 400px; height: auto;">
 </div>
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
