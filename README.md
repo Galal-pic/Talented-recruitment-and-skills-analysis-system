@@ -40,12 +40,9 @@ Beyond aiding job seekers, our platform streamlines the recruitment process for 
 </div>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 ### Introduction
 
-In this project, we address the needs of two key stakeholders: the job seeker, who seeks roles aligned with their skills and desires insights into areas for skill enhancement to secure their dream job, and the recruiter, who aims to procure the most fitting CVs by defining job requirements and essential skills. We provide recommendations for the most suitable CVs and facilitate effective communication channels between recruiters and potential candidates.
-
+In this project, we address the needs of two key stakeholders: the job seeker, who seeks roles aligned with their skills and desires insights into areas for skill enhancement to secure their dream job, and the recruiter, who aims to procure the most fitting CVs by defining job requirements and essential skills. We recommend the most suitable CVs and facilitate effective communication channels between recruiters and potential candidates.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
