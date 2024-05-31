@@ -5,7 +5,7 @@
     <img src="https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system/blob/master/resume/static/images/logo_new.png" alt="Logo" width="120" height="120">
   </a>
   
-  <h3 align="center">Talented-recruitment-and-skills-analysis-system</h3>
+  <h2 align="center">Talented-recruitment-and-skills-analysis-system</h2>
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -54,9 +54,9 @@ Beyond aiding job seekers, our platform streamlines the recruitment process for 
 
 
 
-### Built With
+### Introduction
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+In this project, we address the needs of two key stakeholders: the job seeker, who seeks roles aligned with their skills and desires insights into areas for skill enhancement to secure their dream job, and the recruiter, who aims to procure the most fitting CVs by defining job requirements and essential skills. We provide recommendations for the most suitable CVs and facilitate effective communication channels between recruiters and potential candidates.
 
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
