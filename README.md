@@ -7,7 +7,7 @@
   </a>
   
   <h3 align="center">Talented-recruitment-and-skills-analysis-system</h3>
-
+</div>
 
 <!-- TABLE OF CONTENTS -->
 <details>
