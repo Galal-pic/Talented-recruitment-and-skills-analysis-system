@@ -41,9 +41,10 @@
 ## About The Project
 
 <div style="display:flex;">
-  <img src="![uploadcv](https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system/assets/70837846/4565282c-a5a0-46d3-a47e-601a7ebd62d5" alt="uploadcv" style="width: 400px; height: auto;">
+  <img src="https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system/assets/70837846/4565282c-a5a0-46d3-a47e-601a7ebd62d5" alt="uploadcv" style="width: 400px; height: auto;">
   <img src="https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system/assets/70837846/ec499092-491c-4b12-a24f-a39401620ff8" alt="Capture" style="width: 400px; height: auto;">
 </div>
+
 
 
 There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
