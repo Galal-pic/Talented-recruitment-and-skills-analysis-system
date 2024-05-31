@@ -5,23 +5,8 @@
   <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system/blob/master/resume/static/images/logo_new.png" alt="Logo" width="120" height="120">
   </a>
-
-  <h3 align="center">Best-README-Template</h3>
-
-  <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
-  </p>
-</div>
-
+  
+  <h3 align="center">Talented-recruitment-and-skills-analysis-system</h3>
 
 
 <!-- TABLE OF CONTENTS -->
@@ -55,7 +40,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+![uploadcv](https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system/assets/70837846/00611e2d-a7f4-4ad0-ab5c-817d9afe082a) ![Capture](https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system/assets/70837846/ec499092-491c-4b12-a24f-a39401620ff8)
+
 
 There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
