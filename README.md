@@ -12,19 +12,8 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-      <a href="#Abstract"> Abstract</a>
-      <ul>
-        <li><a href="#Introduction">Introduction</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
+    <li><a href="#Abstract"> Abstract</a></li>
+    <li><a href="#Introduction">Introduction</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
