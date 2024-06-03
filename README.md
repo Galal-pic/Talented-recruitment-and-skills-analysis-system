@@ -12,14 +12,10 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#Abstract"> Abstract</a></li>
-    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#Abstract"> Project Description</a></li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#Dataset">Dataset</a></li>
+    <li><a href="#Models">Models</a></li>
   </ol>
 </details>
 
@@ -72,6 +68,7 @@ We used the transformer library to train several models
 
 2. In our CV analysis process, we employed `spaCy` to fine-tune a small English model for training on CVs, to extract skills.
 3. We employed `sentence transformation` in text representation to assist in calculating the percentage of similarity between each skill listed in the CV and the required skills for the specific job. This helped determine the degree of suitability for each candidate."
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
