@@ -47,13 +47,13 @@ In this project, we address the needs of two key stakeholders:
 - If you are looking for a job, you can submit your CV, and we will show you which jobs are suitable for you and what skills are required for them. Through our analysis of over 15,000 job descriptions, we can share with you the skills most frequently needed for the job you want. We will also offer you job opportunities that you can register for directly.
   
   <div style="text-align: center;">
-    <img src="https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system/assets/70837846/18f45491-f203-4c59-90dc-5c548ae41a24" alt="uploadcv" style="width: 600px; height: auto; margin: 20px 0;">
+    <img src="https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system/assets/70837846/18f45491-f203-4c59-90dc-5c548ae41a24" alt="uploadcv" style="width: 800px; height: auto; margin: 20px 0;">
   </div>
 
 - If you are a recruiter looking for talented individuals, we can assist you by creating the job description for the position. We will analyze this description and extract the important skills. Then, we will find the best candidates for you and present their biographies.
 
   <div style="text-align: center;">
-    <img src="https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system/assets/70837846/58fc64e1-709c-4d5d-8194-a5175b604dd7" alt="Capture" style="width: 600px; height: auto; margin: 20px 0;">
+    <img src="https://github.com/Galal-pic/Talented-recruitment-and-skills-analysis-system/assets/70837846/58fc64e1-709c-4d5d-8194-a5175b604dd7" alt="Capture" style="width: 800px; height: auto; margin: 20px 0;">
   </div>
 
 
