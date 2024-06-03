@@ -26,13 +26,14 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## Abstract
+## Project Description
+We're revolutionizing the hiring landscape by integrating diverse language models, deep learning techniques, and insightful analysis. At the core of our initiative are innovative bracelets designed to bridge the gap between job seekers and their ideal career prospects.
 
-This project introduces an innovative approach to revolutionizing the employment process by integrating advanced technology and insightful analysis. Our focus is on the development of bracelets that function as a conduit between job seekers and their ideal career opportunities. Through meticulous scanning and analysis of numerous job descriptions, we extract essential skills crucial for various positions, serving as the foundation for success in the competitive job market. 
+Our state-of-the-art system transforms the job search process by meticulously scanning and analyzing job descriptions from over four leading hiring platforms. We identify the essential skills required for various positions, laying the foundation for success in today's competitive job market.
 
-Utilizing sophisticated algorithms, our bracelets seamlessly match these extracted skills with those showcased in job seekers' CVs, facilitating a comprehensive evaluation of alignment between candidate skills and market demands. Additionally, our system identifies any skill gaps or deficiencies in the candidate's profile, offering personalized recommendations and advertisements for skill enhancement or training opportunities. 
+Through advanced techniques in resume and job description analysis, our system seamlessly aligns extracted skills with those showcased on a job seeker's resume. This enables a comprehensive evaluation of the alignment between candidate skills and market demands. Additionally, we detect any skill gaps or deficiencies in a candidate's profile and provide personalized recommendations and advertisements for skill enhancement or training opportunities.
 
-Beyond aiding job seekers, our platform streamlines the recruitment process for companies by providing them with tailored CVs that precisely align with their job descriptions, thereby enhancing efficiency and effectiveness in hiring practices.
+But we don't stop there. We're committed to simplifying the hiring process for businesses as well. By providing tailored resumes precisely aligned with their job descriptions, we enhance efficiency and effectiveness in their hiring endeavors.
 
 ## Introduction
 
