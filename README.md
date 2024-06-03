@@ -40,7 +40,6 @@ But we don't stop there. We're committed to simplifying the hiring process for b
 ### In this project, we address the needs of two key stakeholders: 
 - **Job seeker**, who seeks roles aligned with their skills and desires insights into areas for skill enhancement to secure their dream job
 - **Recruiter**, who aims to procure the most fitting CVs by defining job requirements and essential skills.
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- GETTING STARTED -->
