@@ -27,7 +27,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## Project Description
-We're revolutionizing the hiring landscape by integrating diverse language models, deep learning techniques, and insightful analysis. At the core of our initiative are innovative bracelets designed to bridge the gap between job seekers and their ideal career prospects.
+We're revolutionizing the hiring landscape by integrating diverse language models (LM), deep learning techniques, and insightful analysis. At the core of our initiative are innovative bracelets designed to bridge the gap between job seekers and their ideal career prospects.
 
 Our state-of-the-art system transforms the job search process by meticulously scanning and analyzing job descriptions from over four leading hiring platforms. We identify the essential skills required for various positions, laying the foundation for success in today's competitive job market.
 
@@ -36,11 +36,10 @@ Through advanced techniques in resume and job description analysis, our system s
 But we don't stop there. We're committed to simplifying the hiring process for businesses as well. By providing tailored resumes precisely aligned with their job descriptions, we enhance efficiency and effectiveness in their hiring endeavors.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Introduction
 
-In this project, we address the needs of two key stakeholders: 
+### In this project, we address the needs of two key stakeholders: 
 - **Job seeker**, who seeks roles aligned with their skills and desires insights into areas for skill enhancement to secure their dream job
-- **Recruiter**, who aims to procure the most fitting CVs by defining job requirements and essential skills. We recommend the most suitable CVs and facilitate effective communication channels between recruiters and potential candidates.
+- **Recruiter**, who aims to procure the most fitting CVs by defining job requirements and essential skills.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
