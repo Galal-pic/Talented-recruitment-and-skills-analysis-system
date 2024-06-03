@@ -34,12 +34,11 @@ Our state-of-the-art system transforms the job search process by meticulously sc
 Through advanced techniques in resume and job description analysis, our system seamlessly aligns extracted skills with those showcased on a job seeker's resume. This enables a comprehensive evaluation of the alignment between candidate skills and market demands. Additionally, we detect any skill gaps or deficiencies in a candidate's profile and provide personalized recommendations and advertisements for skill enhancement or training opportunities.
 
 But we don't stop there. We're committed to simplifying the hiring process for businesses as well. By providing tailored resumes precisely aligned with their job descriptions, we enhance efficiency and effectiveness in their hiring endeavors.
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ### In this project, we address the needs of two key stakeholders: 
 - **Job seeker**, who seeks roles aligned with their skills and desires insights into areas for skill enhancement to secure their dream job
 - **Recruiter**, who aims to procure the most fitting CVs by defining job requirements and essential skills.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- GETTING STARTED -->
