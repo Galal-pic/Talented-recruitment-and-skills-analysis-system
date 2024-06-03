@@ -64,9 +64,16 @@ We collected data from various recruitment platforms like `Wuzzuf`, `Indeed`, `L
 
 ## Models
 We used the transformer library to train several models
-1. I fine-tuned the BERT model for the task of extracting skills from job descriptions and achieved an accuracy rate of more than 91%. This success underscores the effectiveness of the BERT model in accurately identifying and extracting relevant skills from textual data.
+1. I fine-tuned the `BERT` model for the task of extracting skills from job descriptions and achieved an accuracy rate of more than `91%`. This success underscores the effectiveness of the BERT model in accurately identifying and extracting relevant skills from textual data.
 
  Training Loss | Validation Loss | Precision | Recall | F1 | Accuracy |
 ---------------|-----------------|-----------|--------|----|----------|
- 0.025200      | 0.041385        | 0.896973  | 0.916096 | 0.906434 | 0.987095 |
+ 0.025200      | 0.041385        | 0.906973  | 0.916096 | 0.916434 | 0.987095 |
+
+2. In our CV analysis process, we employed `spaCy` to fine-tune a small English model for training on CVs, to extract skills.
+3. We employed `sentence transformation` in text representation to assist in calculating the percentage of similarity between each skill listed in the CV and the required skills for the specific job. This helped determine the degree of suitability for each candidate."
+
+
+
+
 
