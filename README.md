@@ -60,3 +60,13 @@ But we don't stop there. We're committed to simplifying the hiring process for b
 
 ## Dataset
 We collected data from various recruitment platforms like `Wuzzuf`, `Indeed`, `LinkedIn`, and `Glassdoor`, extracting details such as **job titles**, **descriptions**, and **company names**. Using the `Selenium` library, we automated the process of data extraction. Leveraging this data, we utilized large language models such as `GPT` to annotate job descriptions and identify essential skills. This process facilitated the effective preparation of data for further analysis and utilization in our project.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Models
+We used the transformer library to train several models
+1. I fine-tuned the BERT model for the task of extracting skills from job descriptions and achieved an accuracy rate of more than 91%. This success underscores the effectiveness of the BERT model in accurately identifying and extracting relevant skills from textual data.
+
+ Training Loss | Validation Loss | Precision | Recall | F1 | Accuracy |
+---------------|-----------------|-----------|--------|----|----------|
+ 0.025200      | 0.041385        | 0.896973  | 0.916096 | 0.906434 | 0.987095 |
+
